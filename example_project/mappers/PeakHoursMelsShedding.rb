@@ -48,11 +48,11 @@ module URBANopt
         osw = super(scenario, features, feature_names)
         OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', '__SKIP__', false)
         # Percentage Reduction of Electric Equipment Power (%). Enter a value between 0 and 100
-        OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'epd_reduce_percent', 50.0)
+        OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'epd_reduce_percent', 20.0)
         # Starting Time for the Reduction in HH:MM:SS format
-        OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'start_time', '17:00:00')
+        OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'start_time1', '17:00:00')
         # End Time for the Reduction in HH:MM:SS format
-        OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'end_time', '21:00:00')
+        OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'end_time1', '21:00:00')
 
         # First Starting Date for the Reduction in MM-DD format
         OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'start_date1', '07-01')
@@ -62,10 +62,14 @@ module URBANopt
         # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'start_date2', '')
         # Second End Date for the Reduction in MM-DD format. Leave it blank if not needed
         # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'end_date2', '')
+        # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'start_time2', '')
+        # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'end_time2', '')
         # Third Starting Date for the Reduction in MM-DD format. Leave it blank if not needed
         # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'start_date3', '')
         # Third End Date for the Reduction in MM-DD format. Leave it blank if not needed
         # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'end_date3', '')
+        # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'start_time3', '')
+        # OpenStudio::Extension.set_measure_argument(osw, 'reduce_epd_by_percentage_for_peak_hours', 'end_time3', '')
         return osw
       end
     end
